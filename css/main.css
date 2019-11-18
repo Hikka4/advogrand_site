@@ -83,6 +83,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 20px;
 }
 
 .header__content .header__logo {
@@ -138,5 +139,58 @@ a {
 
 .header__content .header__app .app__button a img {
   height: 20px;
+}
+
+.top__content {
+  background-image: url(../img/bg__top.jpg);
+  padding-top: 130px;
+  padding-bottom: 153px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.top__content .content__info .info__head {
+  color: #ffffff;
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 65px;
+}
+
+.top__content .content__info .info__head span {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.top__content .content__info .info__title {
+  color: #ffffff;
+  font-family: "Proxima Nova Lt", sans-serif;
+  font-weight: 300;
+  line-height: 32px;
+  font-size: 24px;
+  margin-bottom: 91px;
+}
+
+.top__content .content__info .info__title span {
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-weight: 700;
+}
+
+.top__content .content__info .info__button .button__link {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700px;
+  line-height: 26px;
+  font-family: "Proxima Nova Rg", sans-serif;
+  padding: 25px 49px 25px 43px;
+  background-color: #c91111;
+  border-radius: 5px;
+}
+
+.top__content .content__info .info__button .button__link:hover {
+  background-color: #0f0f0f;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#c10b0b), to(#e42626));
+  background-image: linear-gradient(to top, #c10b0b 0%, #e42626 100%);
 }
 /*# sourceMappingURL=main.css.map */
