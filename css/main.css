@@ -1,6 +1,142 @@
 @import url(d:\Open Server\OSPanel\domains\Advogrand\css\reset.css);
 @import url(d:\Open Server\OSPanel\domains\Advogrand\fonts\stylesheet.css);
+body {
+  font-family: "Muller";
+  font-size: 14px;
+}
+
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.float__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0;
+}
+
+.float__menu .contact__number {
+  color: #1c1c1c;
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.float__menu nav {
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.14px;
+}
+
+.float__menu nav a {
+  color: #1c1c1c;
+  padding: 0 15px;
+}
+
+.float__menu nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.float__menu .callback__button {
+  font-family: "Proxima Nova Rg", sans-serif;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #c91111;
+}
+
+.float__menu .callback__button:hover {
+  background-color: #0f0f0f;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#c10b0b), to(#e42626));
+  background-image: linear-gradient(to top, #c10b0b 0%, #e42626 100%);
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__content .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__content .header__logo .logo__name {
+  color: #1c1c1c;
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  margin-left: 10px;
+}
+
+.header__content .header__title {
+  font-family: "Proxima Nova Lt", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #1c1c1c;
+  line-height: 22px;
+  letter-spacing: 0.14px;
+}
+
+.header__content .header__app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__content .header__app .app__callback-number {
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c1c1c;
+  letter-spacing: 0.18px;
+  line-height: 22px;
+}
+
+.header__content .header__app .app__button {
+  margin-left: 30px;
+}
+
+.header__content .header__app .app__button a {
+  padding: 10px;
+  border: 1px solid #e42626;
+  border-radius: 5px;
+}
+
+.header__content .header__app .app__button a img {
+  height: 20px;
 }
 /*# sourceMappingURL=main.css.map */

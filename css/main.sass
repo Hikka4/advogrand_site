@@ -1,8 +1,88 @@
 @import "reset.css"
 @import "../fonts/stylesheet.css"
 
+body
+    font-family: "Muller"
+    font-size: 14px
+
 a
     text-decoration: none
 
+.container
+    width: 940px
+    margin: 0 auto
+
 // Top Section ##################
 
+.float__menu
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 10px 0
+    .contact__number
+        color: #1c1c1c
+        font-family: "Proxima Nova Rg", sans-serif
+        font-weight: bold
+        line-height: 22px
+    nav
+        font-family: "Proxima Nova Rg", sans-serif
+        font-size: 14px
+        font-weight: 300
+        line-height: 22px
+        letter-spacing: 0.14px
+        a
+            color: #1c1c1c
+            padding: 0 15px
+        ul
+            display: flex
+            justify-content: space-between
+    .callback__button
+        font-family: "Proxima Nova Rg", sans-serif
+        color: #ffffff
+        font-size: 12px
+        font-weight: 700
+        line-height: 22px
+        padding: 10px 20px
+        border-radius: 5px
+        background-color: #c91111
+        &:hover
+            background-color: #0f0f0f
+            background-image: linear-gradient(to top, #c10b0b 0%, #e42626 100%)
+
+.header__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .header__logo
+        display: flex
+        align-items: center
+        .logo__name
+            color: #1c1c1c
+            font-family: "Proxima Nova Rg", sans-serif
+            font-weight: bold
+            font-size: 23px
+            margin-left: 10px
+    .header__title
+        font-family: "Proxima Nova Lt", sans-serif
+        font-weight: 300
+        font-size: 14px
+        color: #1c1c1c
+        line-height: 22px
+        letter-spacing: 0.14px
+    .header__app
+        display: flex
+        .app__callback-number
+            font-family: "Proxima Nova Rg", sans-serif
+            font-size: 18px
+            font-weight: 700
+            color: #1c1c1c
+            letter-spacing: 0.18px
+            line-height: 22px
+        .app__button
+            margin-left: 30px
+            a
+                padding: 10px
+                border: 1px solid #e42626
+                border-radius: 5px
+                img
+                    height: 20px
