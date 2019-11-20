@@ -24,7 +24,8 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 31px;
 }
 
 .float__menu .contact__number {
@@ -73,6 +74,10 @@ a {
   background-image: linear-gradient(to top, #c10b0b 0%, #e42626 100%);
 }
 
+header {
+  margin-bottom: 20px;
+}
+
 .header__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,7 +88,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
 }
 
 .header__content .header__logo {
@@ -192,5 +196,55 @@ a {
   background-color: #0f0f0f;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#c10b0b), to(#e42626));
   background-image: linear-gradient(to top, #c10b0b 0%, #e42626 100%);
+}
+
+#services__info {
+  padding-top: 100px;
+}
+
+.section__name {
+  color: #1c1c1c;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Proxima Nova Rg", sans-serif;
+  line-height: 22px;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+#services__info .info__block {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#services__info .info__block .info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 33%;
+  margin-bottom: 95px;
+}
+
+#services__info .info__block .info__item img {
+  margin-right: 30px;
+}
+
+#services__info .info__block .info__item .item__title {
+  color: #1c1c1c;
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.16px;
 }
 /*# sourceMappingURL=main.css.map */
