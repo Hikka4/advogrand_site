@@ -198,7 +198,7 @@ header {
   background-image: linear-gradient(to top, #c10b0b 0%, #e42626 100%);
 }
 
-#services__info {
+#services__provided {
   padding-top: 100px;
 }
 
@@ -212,7 +212,7 @@ header {
   text-align: center;
 }
 
-#services__info .info__block {
+#services__provided .provided__block {
   margin-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,7 +224,7 @@ header {
           justify-content: space-between;
 }
 
-#services__info .info__block .info__item {
+#services__provided .provided__block .provided__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,11 +235,11 @@ header {
   margin-bottom: 95px;
 }
 
-#services__info .info__block .info__item img {
+#services__provided .provided__block .provided__item img {
   margin-right: 30px;
 }
 
-#services__info .info__block .info__item .item__title {
+#services__provided .provided__block .provided__item .item__title {
   color: #1c1c1c;
   font-family: "Proxima Nova Rg", sans-serif;
   font-size: 16px;
