@@ -23,7 +23,7 @@
 }
 
 @font-face {
-    font-family: 'Proxima Nova Rg';
+    font-family: 'Proxima Nova Bold';
     src: url('ProximaNova-Bold.woff2') format('woff2'),
         url('ProximaNova-Bold.woff') format('woff');
     font-weight: bold;

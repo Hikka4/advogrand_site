@@ -1,5 +1,3 @@
-@import url(d:\Open Server\OSPanel\domains\Advogrand\css\reset.css);
-@import url(d:\Open Server\OSPanel\domains\Advogrand\fonts\stylesheet.css);
 body {
   font-family: "Muller";
   font-size: 14px;
@@ -200,6 +198,7 @@ header {
 
 #services__provided {
   padding-top: 100px;
+  padding-bottom: 98px;
 }
 
 .section__name {
@@ -244,6 +243,83 @@ header {
   font-family: "Proxima Nova Rg", sans-serif;
   font-size: 16px;
   font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.16px;
+}
+
+#about__services {
+  background-image: url(../img/about__bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 100px;
+  padding-bottom: 98px;
+}
+
+#about__services .section__name {
+  color: #ffffff;
+  margin-bottom: 79px;
+}
+
+#about__services .about__title {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 85px;
+}
+
+#about__services .about__title .about__title-content {
+  font-size: 16px;
+  font-family: "Proxima Nova Lt", sans-serif;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.16px;
+}
+
+#about__services .about__title .about__title-content:first-child {
+  margin-bottom: 30px;
+}
+
+#about__services .about__statistics {
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#about__services .about__statistics .statistics__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 154px;
+  font-family: "Proxima Nova Rg", sans-serif;
+  text-align: center;
+}
+
+#about__services .about__statistics .statistics__item .item__number {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  margin-bottom: 29px;
+}
+
+#about__services .about__statistics .statistics__item .item__number span {
+  font-size: 24px;
+  letter-spacing: 0.24px;
+}
+
+#about__services .about__statistics .statistics__item .item__title {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Proxima Nova Lt", sans-serif;
   line-height: 22px;
   letter-spacing: 0.16px;
 }
