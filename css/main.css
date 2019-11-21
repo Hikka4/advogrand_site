@@ -323,4 +323,42 @@ header {
   line-height: 22px;
   letter-spacing: 0.16px;
 }
+
+#use__services {
+  background-color: #f5f5f5;
+  padding-top: 100px;
+  padding-bottom: 98px;
+}
+
+#use__services .services__box {
+  padding-top: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#use__services .services__box .services__item {
+  width: 33.3333%;
+  text-align: center;
+}
+
+#use__services .services__box .services__item .item__title {
+  margin-top: 54px;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.16;
+  font-weight: 300;
+  font-family: "Proxima Nova Lt", sans-serif;
+  color: #1c1c1c;
+}
+
+#use__services .services__box .services__item:last-child .item__title {
+  font-weight: 700;
+  font-family: "Proxima Nova Bold", sans-serif;
+}
 /*# sourceMappingURL=main.css.map */
