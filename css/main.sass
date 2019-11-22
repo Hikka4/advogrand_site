@@ -139,10 +139,10 @@ header
     color: #1c1c1c
     font-size: 30px
     font-weight: 700
-    font-family: "Proxima Nova Rg", sans-serif
-    line-height: 22px
+    font-family: "Proxima Nova Bold", sans-serif
     letter-spacing: 0.3px
     text-align: center
+    line-height: 22px
 
 #services__provided
     .provided__block
@@ -223,10 +223,12 @@ header
         padding-top: 96px
         display: flex
         justify-content: space-around
-        align-items: center
+        align-items: flex-start
         .services__item
             width: 33.3333%
             text-align: center
+            img
+                height: 90px
             .item__title
                 margin-top: 54px
                 font-size: 16px
@@ -239,3 +241,88 @@ header
                 .item__title
                     font-weight: 700
                     font-family: "Proxima Nova Bold", sans-serif
+
+#advantages
+    padding-top: 100px
+    .section__name
+        line-height: 30px
+    .advantages__info
+        display: flex
+        margin-top: 80px
+        .info__content
+            display: flex
+            align-items: flex-end
+            .position__name
+                font-family: "Proxima Nova Rg", sans-serif
+                font-weight: 300
+                font-size: 13px
+                line-height: 45px
+                letter-spacing: 0.13px
+                margin-bottom: 39px
+                li
+                    text-align: right
+                    color: #000000
+            .comparison
+                display: flex
+                width: 420px
+                margin-left: 29px
+                .comparison__content
+                    padding: 39px 0
+                    text-align: center
+                    .comparison__name
+                        font-family: "Proxima Nova Bold", sans-serif
+                        font-size: 14px
+                        font-weight: 700
+                        line-height: 40px
+                        letter-spacing: 0.14
+                    li
+                        font-family: "Proxima Nova Rg", sans-serif
+                        font-size: 13px
+                        font-weight: 300
+                        line-height: 45px
+                        letter-spacing: 0.13px
+                .comparison__one
+                    color: #ffffff
+                    box-shadow: 0 10px 10px rgba(38, 184, 58, 0.2)
+                    background-color: #26b83a
+                    width: 50%
+                .comparison__two
+                    width: 50%
+                    border: 1px solid #e8e8e8
+        .info__statistics
+            margin-left: 40px
+            .statistics__name
+                margin-bottom: 34px
+                color: #1c1c1c
+                font-family: "Proxima Nova Bold", sans-serif
+                font-size: 16px
+                font-weight: 700
+                letter-spacing: 0.16px
+            .statistics__content
+                margin-bottom: 57px
+                li
+                    color: #1c1c1c
+                    line-height: 45px
+                    font-weight: 300
+                    letter-spacing: 0.16px
+                    font-family: "Proxima Nova Rg", sans-serif
+                    .icon
+                        width: 25px
+                        margin-right: 20px
+                    .number
+                        font-family: "Proxima Nova Bold", sans-serif
+                        font-weight: 700
+            .statistics__button
+                // display: block
+                // text-align: center
+                color: #ffffff
+                font-size: 18px
+                font-weight: 700
+                letter-spacing: 0.18px
+                line-height: 40px
+                font-family: "Proxima Nova Bold", sans-serif
+                padding: 26px 85px 27px 80px
+                background-color: #c91111
+                border-radius: 5px
+                &:hover
+                    background-image: linear-gradient(to top, #c11717 0%, #e42626 100%)
