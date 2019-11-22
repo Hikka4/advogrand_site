@@ -368,6 +368,7 @@ header {
 
 #advantages {
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #advantages .section__name {
@@ -396,7 +397,7 @@ header {
   font-size: 13px;
   line-height: 45px;
   letter-spacing: 0.13px;
-  margin-bottom: 39px;
+  margin-bottom: 34px;
 }
 
 #advantages .advantages__info .info__content .position__name li {
@@ -413,7 +414,7 @@ header {
 }
 
 #advantages .advantages__info .info__content .comparison .comparison__content {
-  padding: 39px 0;
+  padding: 34px 0;
   text-align: center;
 }
 
@@ -442,8 +443,13 @@ header {
 }
 
 #advantages .advantages__info .info__content .comparison .comparison__two {
+  color: #000;
   width: 50%;
   border: 1px solid #e8e8e8;
+}
+
+#advantages .advantages__info .info__content .comparison .comparison__two li {
+  color: #000000;
 }
 
 #advantages .advantages__info .info__statistics {
@@ -460,7 +466,7 @@ header {
 }
 
 #advantages .advantages__info .info__statistics .statistics__content {
-  margin-bottom: 57px;
+  margin-bottom: 47px;
 }
 
 #advantages .advantages__info .info__statistics .statistics__content li {
@@ -482,6 +488,8 @@ header {
 }
 
 #advantages .advantages__info .info__statistics .statistics__button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
