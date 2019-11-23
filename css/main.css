@@ -505,4 +505,64 @@ header {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#c11717), to(#e42626));
   background-image: linear-gradient(to top, #c11717 0%, #e42626 100%);
 }
+
+#application {
+  background-image: url("../img/application__bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 100px 0;
+}
+
+#application .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#application .application__content {
+  width: 530px;
+}
+
+#application .application__content .content__name {
+  color: #ffffff;
+  font-family: "Muller", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  margin-bottom: 110px;
+}
+
+#application .application__content .content__list {
+  width: 530px;
+}
+
+#application .application__content .content__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: "Muller", sans-serif;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+
+#application .application__content .content__list li .list__number {
+  font-weight: 400;
+  font-family: "Muller Medium", sans-serif;
+  font-size: 18px;
+  color: #e41e1e;
+  padding-right: 20px;
+}
+
+#application .application__button {
+  width: 260px;
+  margin-top: 33px;
+  margin-left: 162px;
+}
+
+#application .application__button a img {
+  margin-bottom: 30px;
+}
 /*# sourceMappingURL=main.css.map */
