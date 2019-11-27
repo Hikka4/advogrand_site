@@ -550,7 +550,7 @@ header {
 
 #application .application__content .content__list li .list__number {
   font-weight: 400;
-  font-family: "Muller Medium", sans-serif;
+  font-family: "Muller", sans-serif;
   font-size: 18px;
   color: #e41e1e;
   padding-right: 20px;
@@ -564,5 +564,101 @@ header {
 
 #application .application__button a img {
   margin-bottom: 30px;
+}
+
+#reviews {
+  padding-top: 100px;
+  background-color: #f5f5f5;
+  padding-bottom: 95px;
+}
+
+#reviews .section__name {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Muller", sans-serif;
+  letter-spacing: 1.5px;
+  color: #313131;
+  margin-bottom: 80px;
+}
+
+#reviews .reviews__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#reviews .reviews__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 70px;
+}
+
+#reviews .reviews__menu li {
+  font-family: "Muller", sans-serif;
+  font-weight: 500;
+  color: #313131;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  padding: 13px 13px 9px 13px;
+  cursor: pointer;
+}
+
+#reviews .reviews__menu li:hover {
+  color: #e42626;
+}
+
+#reviews .reviews__menu .active {
+  border: 2px solid #e42626;
+  border-radius: 5px;
+  color: #e50000;
+}
+
+#reviews .reviews__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#reviews .reviews__content .content__item {
+  margin: 0 10px;
+  width: 300px;
+}
+
+#reviews .reviews__content .content__item .item__img {
+  width: 300px;
+  z-index: 1;
+  position: relative;
+}
+
+#reviews .reviews__content .content__item .item__play {
+  position: absolute;
+  z-index: 22;
+  bottom: 20px;
+  left: 20px;
+}
+
+#reviews .reviews__content .content__item .item__name {
+  cursor: pointer;
+  margin-top: 19px;
+  width: 100%;
+  font-family: "Muller", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #313131;
+}
+
+#reviews .reviews__content .content__item .item__name:hover {
+  color: #e42626;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #e42626;
+          text-decoration-color: #e42626;
 }
 /*# sourceMappingURL=main.css.map */
