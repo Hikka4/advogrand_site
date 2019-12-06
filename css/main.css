@@ -765,4 +765,231 @@ header {
 #partners .partners__slider .slider__box .slider__item:hover .item__hover {
   opacity: 1;
 }
+
+#tariff {
+  padding-top: 100px;
+  padding-bottom: 195px;
+  background-color: #f5f5f5;
+}
+
+#tariff .section__name {
+  font-family: "Muller", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-align: left;
+  color: #313131;
+  margin-bottom: 39px;
+}
+
+#tariff .section__title {
+  font-family: "Muller", sans-serif;
+  font-weight: bold;
+  color: #313131;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+#tariff .tariff__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 39px;
+}
+
+#tariff .tariff__options .option__name {
+  font-family: "Muller", sans-serif;
+  font-weight: 300;
+  color: #313131;
+  font-size: 16px;
+}
+
+#tariff .tariff__options .options__button a {
+  color: #313131;
+  font-family: "Muller", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+#tariff .tariff__options .options__button .button__link {
+  text-transform: uppercase;
+  padding: 11px 15px 12px 15px;
+}
+
+#tariff .tariff__options .options__button .button__link:hover {
+  color: #e42626;
+}
+
+#tariff .tariff__options .options__button .active {
+  border: 2px solid #e42626;
+  border-radius: 5px;
+}
+
+#tariff .tariff__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#tariff .tariff__list .tariff__list-item {
+  height: 920px;
+  background-color: #ffffff;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  width: 33.33333%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tariff .tariff__list .tariff__list-item:nth-child(2) {
+  width: 320px;
+  border-left: none;
+  border-right: none;
+}
+
+#tariff .tariff__list .tariff__list-item .item__name {
+  margin-top: 52px;
+  text-align: center;
+  color: #000000;
+  font-family: "Muller", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 29px;
+}
+
+#tariff .tariff__list .tariff__list-item .item__name span {
+  font-weight: 700;
+}
+
+#tariff .tariff__list .tariff__list-item .item__img {
+  margin-bottom: 30px;
+}
+
+#tariff .tariff__list .tariff__list-item .item__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #f5f5f5;
+  margin: 0 20px;
+  border-bottom: 1px solid #f5f5f5;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#tariff .tariff__list .tariff__list-item .item__list .list__name {
+  text-align: left;
+  color: #000000;
+  font-family: "Muller", sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 40px;
+}
+
+#tariff .tariff__list .tariff__list-item .item__list .list__name li {
+  border-bottom: 1px solid #f5f5f5;
+  padding-left: 11px;
+}
+
+#tariff .tariff__list .tariff__list-item .item__list .list__name li:last-child {
+  border-bottom: none;
+}
+
+#tariff .tariff__list .tariff__list-item .item__list .list__name .special__item {
+  font-size: 13px;
+}
+
+#tariff .tariff__list .tariff__list-item .item__list .list__name .last {
+  line-height: 12px;
+  padding: 8px 11px;
+}
+
+#tariff .tariff__list .tariff__list-item .item__list .list__value {
+  text-align: right;
+  font-family: "Muller", sans-serif;
+  font-weight: 500;
+  color: #000000;
+  font-size: 11px;
+}
+
+#tariff .tariff__list .tariff__list-item .item__list .list__value li {
+  border-bottom: 1px solid #f5f5f5;
+  padding-right: 11px;
+  line-height: 40px;
+  white-space: nowrap;
+}
+
+#tariff .tariff__list .tariff__list-item .item__cost {
+  color: #000000;
+  font-family: "Muller", sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 40px;
+  margin-top: auto;
+}
+
+#tariff .tariff__list .tariff__list-item .item__cost span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#tariff .tariff__list .tariff__list-item .item__button {
+  margin-top: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#tariff .tariff__list .tariff__list-item .item__button .button__link {
+  color: #ffffff;
+  background-color: #9a9a9a;
+  font-weight: bold;
+  font-family: "Muller", sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#tariff .tariff__list .tariff__list-item .item__button .consult__button {
+  margin-bottom: 15px;
+  padding: 19px 35px 18px 46px;
+}
+
+#tariff .tariff__list .tariff__list-item .item__button .personal__button {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ff2e00), to(#ff4c25));
+  background-image: linear-gradient(to top, #ff2e00 0%, #ff4c25 100%);
+}
+
+#tariff .tariff__list .tariff__list-item .item__button .family__button {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#008e00), to(#00a300));
+  background-image: linear-gradient(to top, #008e00 0%, #00a300 100%);
+}
+
+#tariff .tariff__list .tariff__list-item .item__button .business__button {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#001c67), to(#02388f));
+  background-image: linear-gradient(to top, #001c67 0%, #02388f 100%);
+}
+
+#tariff .tariff__list .tariff__list-item .item__button .buy__button {
+  margin-bottom: 50px;
+  padding: 19px 64px 18px 76px;
+}
 /*# sourceMappingURL=main.css.map */
