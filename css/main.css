@@ -992,4 +992,142 @@ header {
   margin-bottom: 50px;
   padding: 19px 64px 18px 76px;
 }
+
+#contacts {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #f5f5f5), color-stop(50%, #ffffff));
+  background: linear-gradient(to right, #f5f5f5 50%, #ffffff 50%);
+  padding: 70px 0;
+}
+
+#contacts .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contacts .form__box {
+  width: 50%;
+}
+
+#contacts .form__content {
+  margin-left: auto;
+  margin-right: 80px;
+  max-width: 320px;
+}
+
+#contacts .form__content .input__setting {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  width: 288px;
+  font-size: 16px;
+  color: #000000;
+  padding: 15px;
+}
+
+#contacts .form__content .input__massage {
+  height: 80px;
+  resize: none;
+  padding: 15px;
+}
+
+#contacts .form__content .form__content__name {
+  color: #000000;
+  font-family: "Muller", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 31px;
+}
+
+#contacts .form__content .form__content__title-name {
+  font-family: "Muller", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #000000;
+  margin-bottom: 14px;
+  margin-top: 19px;
+}
+
+#contacts .form__content .form__content__title-name:first-child {
+  margin-top: 0;
+}
+
+#contacts .form__content .form__content__button {
+  color: #ffffff;
+  font-family: "Muller", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 40px;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#cc0000), to(#d00000));
+  background-image: linear-gradient(to top, #cc0000 0%, #d00000 100%);
+  border: none;
+  width: 100%;
+  height: 65px;
+  margin-top: 30px;
+  margin-bottom: 17px;
+}
+
+#contacts .form__content .form__content__title-info {
+  text-align: center;
+  color: #000000;
+  font-family: "Muller", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+#contacts .contacts__info {
+  margin-left: 78px;
+  margin-top: 30px;
+}
+
+#contacts .contacts__info .info__name {
+  color: #000000;
+  font-weight: bold;
+  font-family: "Muller", sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 78px;
+}
+
+#contacts .contacts__info .info__subtitle {
+  color: #000000;
+  font-family: "Muller", sans-serif;
+  font-weight: 300;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+#contacts .contacts__info .info__phone {
+  font-size: 17px;
+  font-family: "Muller", sans-serif;
+  font-weight: bold;
+  line-height: 22px;
+  margin-bottom: 28px;
+}
+
+#contacts .contacts__info .info__email {
+  color: #000000;
+  font-family: "Muller", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  text-decoration: underline;
+  margin-bottom: 25px;
+}
+
+#contacts .contacts__info .time__content {
+  fony-family: "Muller", sasns-serif;
+  color: #000000;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+#contacts .contacts__info .time__content:first-child {
+  margin-bottom: 32px;
+}
 /*# sourceMappingURL=main.css.map */
