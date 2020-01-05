@@ -6,6 +6,11 @@ a
     text-decoration: none
 
 .container
+    @media screen and ( max-width: 940px) and (min-width: 768px )
+        width: 90%
+    @media screen and ( max-width: 767px) and (min-width: 425px )
+        width: 100%
+        margin: 0
     width: 940px
     margin: 0 auto
 
@@ -20,23 +25,54 @@ a
     justify-content: space-between
     margin-top: 10px
     margin-bottom: 31px
+    @media screen and ( max-width: 940px ) and ( min-width: 768px )
+        flex-direction: column
+    @media screen and ( max-width: 767px) and (min-width: 425px )
+        flex-direction: column
     .contact__number
         color: #1c1c1c
         font-family: "Proxima Nova Rg", sans-serif
         font-weight: bold
-        line-height: 22px
+        line-height: 22px            
     nav
         font-family: "Proxima Nova Rg", sans-serif
         font-size: 14px
         font-weight: 300
         line-height: 22px
         letter-spacing: 0.14px
+        @media screen and ( max-width: 670px) and (min-width: 425px )
+            display: flex
+            flex-direction: column
+            align-items: center
+        .nav__button
+            display: none
+            @media screen and ( max-width: 670px) and (min-width: 425px )
+                display: block
+            .hamburger__button
+                background-color: #000
+                width: 35px
+                height: 4px
+                margin: 3px
+                display: block
+                border-radius: 5px
+        @media screen and ( max-width: 940px ) and ( min-width: 768px )
+            margin: 10px 0
+        @media screen and ( max-width: 767px)
+            margin: 10px 0
         a
             color: #1c1c1c
             padding: 0 15px
+            &:hover
+                color: #e46262
         ul
             display: flex
             justify-content: space-between
+            @media screen and ( max-width: 670px) and (min-width: 425px )
+                flex-direction: column
+                text-align: center
+                display: none
+                li
+                    padding: 5px
     .callback__button
         font-family: "Proxima Nova Rg", sans-serif
         color: #ffffff
@@ -57,6 +93,9 @@ header
     display: flex
     justify-content: space-between
     align-items: center
+    @media screen and ( max-width: 640px) and (min-width: 425px )
+        flex-wrap: wrap
+        justify-content: space-around
     .header__logo
         display: flex
         align-items: center
@@ -75,6 +114,7 @@ header
         letter-spacing: 0.14px
     .header__app
         display: flex
+        align-items: center
         .app__callback-number
             font-family: "Proxima Nova Rg", sans-serif
             font-size: 18px
@@ -85,11 +125,21 @@ header
         .app__button
             margin-left: 30px
             a
-                padding: 10px
-                border: 1px solid #e42626
+                padding: 5px
+                border: 1px solid #000000
                 border-radius: 5px
+                display: inline-block
+                svg
+                    fill: #000000 
+                    width: 20px
+                    height: 20px
                 img
                     height: 20px
+                &:hover
+                    border-color: #e42626
+                    svg
+                        fill: #e42626
+                        
 
 .top__content
     background-image: url(../img/bg__top.jpg)
@@ -98,6 +148,9 @@ header
     background-size: cover
     background-repeat: no-repeat
     .content__info
+        @media screen and ( max-width: 767px) and (min-width: 425px )
+            width: 90%
+            margin: 0 auto
         .info__head
             color: #ffffff
             font-family: "Proxima Nova Rg", sans-serif
@@ -153,11 +206,24 @@ header
         display: flex
         flex-wrap: wrap
         justify-content: space-between
+        @media screen and ( max-width: 767px) and (min-width: 425px )
+            margin: 0 auto
+            margin-top: 80px
+            width: 90%
+            justify-content: space-around
         .provided__item
             display: flex
             align-items: center
             width: 33%
             margin-bottom: 95px
+            @media screen and ( max-width: 767px)
+                width: 40%
+                // text-align: center
+                &:last-child
+                    margin-bottom: 0
+            @media screen and ( max-width: 555px) and (min-width: 425px )
+                width: 50%
+                // text-align: center
             img
                 margin-right: 30px
             .item__title
@@ -175,6 +241,10 @@ header
     background-position: center center
     padding-top: 100px
     padding-bottom: 98px
+    @media screen and ( max-width: 767px) and (min-width: 425px )
+        .container
+            width: 90%
+            margin: 0 auto
     .section__name
         color: #ffffff
         margin-bottom: 79px
@@ -194,18 +264,21 @@ header
         color: #ffffff
         display: flex
         justify-content: space-around
-           
+        @media screen and ( max-width: 767px) and (min-width: 425px )
+            flex-wrap: wrap
         .statistics__item
             display: flex
             flex-direction: column
             align-items: center
-            max-width: 154px
+            width: 154px
             font-family: "Proxima Nova Rg", sans-serif
             text-align: center
+            @media screen and ( max-width: 767px) and (min-width: 425px )
+                width: 50%
+                margin-bottom: 15px
             .item__number
                 font-size: 48px
                 font-weight: 700
-                // line-height: 20px
                 letter-spacing: 0.48px
                 margin-bottom: 29px
                 span
@@ -227,9 +300,17 @@ header
         display: flex
         justify-content: space-around
         align-items: flex-start
+        @media screen and ( max-width: 650px) and (min-width: 425px )
+            flex-wrap: wrap
+            width: 90%
+            margin: 0 auto
         .services__item
             width: 33.3333%
             text-align: center
+            @media screen and ( max-width: 650px) and (min-width: 425px )
+                width: 50%
+                margin-bottom: 15px
+
             img
                 height: 90px
             .item__title
@@ -248,14 +329,28 @@ header
 #advantages
     padding-top: 100px
     padding-bottom: 100px
+    @media screen and ( max-width: 767px) and (min-width: 425px )
+        display: none
     .section__name
         line-height: 30px
     .advantages__info
         display: flex
         margin-top: 80px
+        @media screen and ( max-width: 940px ) and ( min-width: 768px )
+            flex-direction: column
+            align-items: center
+        @media screen and ( max-width: 767px) and (min-width: 425px )
+            flex-direction: column
+            align-items: center
+
+
         .info__content
             display: flex
             align-items: flex-end
+            @media screen and ( max-width: 940px ) and ( min-width: 768px )
+                margin-bottom: 20px
+            @media screen and ( max-width: 767px) and (min-width: 425px )
+                margin-bottom: 20px
             .position__name
                 font-family: "Proxima Nova Rg", sans-serif
                 font-weight: 300
@@ -298,6 +393,12 @@ header
                         color: #000000
         .info__statistics
             margin-left: 40px
+            @media screen and ( max-width: 940px ) and ( min-width: 768px )
+                text-align: center
+            @media screen and ( max-width: 767px) and (min-width: 425px )
+                display: flex
+                flex-direction: column
+                align-items: center
             .statistics__name
                 margin-bottom: 34px
                 color: #1c1c1c
@@ -307,7 +408,6 @@ header
                 letter-spacing: 0.16px
             .statistics__content
                 margin-bottom: 47px
-                
                 li
                     color: #1c1c1c
                     line-height: 45px
@@ -333,6 +433,8 @@ header
                 padding: 26px 85px 27px 80px
                 background-color: #c91111
                 border-radius: 5px
+                @media screen and ( max-width: 767px) and (min-width: 425px )
+                    padding: 10px 45px 10px 45px
                 &:hover
                     background-image: linear-gradient(to top, #c11717 0%, #e42626 100%)
 #application
@@ -343,8 +445,15 @@ header
     padding: 100px 0
     .container
         display: flex
+        @media screen and ( max-width: 830px ) and ( min-width: 425px )
+            flex-direction: column
+        @media screen and ( max-width: 767px) and (min-width: 425px )
+            width: 90%
+            margin: 0 auto
     .application__content
         width: 530px
+        @media screen and ( max-width: 830px ) and ( min-width: 425px )
+            width: 100%
         .content__name
             color: #ffffff
             font-family: "Muller", sans-serif
@@ -354,6 +463,8 @@ header
             margin-bottom: 110px
         .content__list
             width: 530px
+            @media screen and ( max-width: 767px) and (min-width: 425px )
+                width: 100%
             li
                 display: flex
                 font-size: 18px
@@ -361,6 +472,9 @@ header
                 font-family: "Muller", sans-serif
                 font-weight: 300
                 padding-bottom: 30px
+                @media screen and ( max-width: 767px) and (min-width: 425px )
+                    &:first-child
+                        display: inline-block
                 .list__number
                     font-weight: 400
                     font-family: "Muller", sans-serif
@@ -368,15 +482,42 @@ header
                     color: #e41e1e
                     padding-right: 20px
                 .underline
+                    color: #ffffff
                     text-decoration: underline
                     margin: 0 4px
+                    &:hover
+                        color: #e41e1e
+                @media screen and ( max-width: 630px) and (min-width: 425px )
+                    .mobile__controle
+                        display: inline-block
+                        padding-left: 36px
     .application__button
         width: 260px
         margin-top: 33px
         margin-left: 162px
+        @media screen and ( max-width: 940px )
+            margin-left: 40px
+        @media screen and ( max-width: 830px ) and ( min-width: 425px )
+            width: 100%
+            margin-left: 0
+            display: flex
+        @media screen and ( max-width: 767px) and (min-width: 425px )
+            flex-direction: column
+            margin-left: 30px
         a
             img
                 margin-bottom: 30px
+            @media screen and ( max-width: 830px ) and ( min-width: 768px )
+                &:first-child
+                    margin-right: 30px
+            @media screen and ( max-width: 767px) and (min-width: 425px )
+                &:first-child
+                    margin-right: 10px
+            @media screen and ( max-width: 470px) and (min-width: 425px )
+                &:first-child
+                    margin-right: 0
+                    margin-bottom: 20px
+                    
 
 #reviews
     padding-top: 100px
@@ -393,10 +534,27 @@ header
         display: flex
         flex-direction: column
         align-items: center
+    .block__menu
+        position: relative
+        height: 3em
+        display: flex
+        align-items: center
+        @media (pointer: coarse)
+            overflow: hidden
+        @media screen and ( max-width: 767px) and (min-width: 425px )
+            width: 70%
     .reviews__menu
         display: flex
-        margin-bottom: 70px
-        li
+        // margin-bottom: 70px
+        position: relative
+        align-items: center
+        overflow-x: auto
+        overflow-y: hidden
+        -webkit-overflow-scrolling: touch
+        @media (pointer: coarse) 
+            height: 4.5em
+            
+        .menu__link
             font-family: "Muller", sans-serif
             font-weight: 500
             color: #313131
@@ -404,30 +562,103 @@ header
             letter-spacing: 0.7px
             padding: 13px 13px 9px 13px
             cursor: pointer
+
+            flex-shrink: 0
             &:hover
                 color: #e42626
         .active
             border: 2px solid #e42626
             border-radius: 5px
             color: #e50000
+    .menu__shadow
+        width: 4.5em
+        height: 3em
+        position: absolute
+        top: 0
+        background: linear-gradient(to right, rgba(#f5f5f5, 0), #f5f5f5 80%)
+        pointer-events: none
+        opacity: 0
+        transition: opacity 0.1s
+    .is-visible
+        opacity: 1
+    .menu__shadow--start
+        left: -2px
+        transform: rotate(180deg)
+    .menu__shadow--end
+        right: -4px
     .reviews__content
         display: flex
+        margin-top: 70px
+        position: relative
+        height: 19em
+        // media
+        @media (pointer: coarse)
+            overflow: hidden
+        @media screen and ( max-width: 767px) and (min-width: 425px )
+           width: 80%
         .reviews__content-block
             display: flex
             // align-items: center
+            // Тут свойства для скролл блока
+            @media screen and ( max-width: 767px) and (min-width: 425px )
+                position: relative
+                width: 100%
+                overflow-x: auto
+                overflow-y: hidden
+                margin: 0 auto
+                z-index: 0
+                -webkit-overflow-scrolling: touch;
+                height: 19em
+                // media
+                @media (pointer: coarse)
+                    height: 22em
+        .content__shadow
+            width: 4.5em
+            height: 100%
+            position: absolute
+            top: 0
+            background: linear-gradient(to right, rgba(#f5f5f5, 0), #f5f5f5 80%)
+            pointer-events: none
+            // opacity: 0
+            transition: opacity 0.1s
+        .is-active
+            opacity: 1
+        .content__shadow--start
+            left: 0
+            transform: rotate(180deg)
+        .content__shadow--end
+            right: 0
+        
         .reviews__arrow
-            margin-left: 70px
             margin: auto 0
             margin-left: 70px
             color: #cccccc
+            cursor: pointer
             &:first-child
                 margin-right: 70px
                 margin-left: 0
             &:hover
                 color: #e42626
+            @media screen and ( max-width: 840px ) and ( min-width: 768px )
+                margin-left: 30px
+                &:first-child
+                    margin-right: 30px
+            @media screen and ( max-width: 767px) and (min-width: 425px )
+                display: none
+
         .content__item
             margin: 0 10px
             width: 300px
+            // @media screen and ( max-width: 1024px )
+            //     &:last-child
+            //         display: none
+            // @media screen and ( max-width: 940px ) and ( min-width: 768px )
+            //     &:last-child
+            //         display: none
+            // @media screen and ( max-width: 767px) and (min-width: 425px )
+            //     &:nth-child(2)
+            //         display: none
+                    
             .item__img
                 width: 300px
                 z-index: 1
@@ -437,6 +668,8 @@ header
                 z-index: 22
                 bottom: 20px  
                 left: 20px
+                font-size: 25px
+                color: #ffffff
             .item__name
                 cursor: pointer
                 margin-top: 19px
@@ -445,6 +678,7 @@ header
                 font-weight: 300
                 font-size: 14px
                 color: #313131
+                text-align: left
                 &:hover
                     color: #e42626
                     text-decoration: underline
@@ -475,6 +709,14 @@ header
                 margin: 0px 10px
                 width: 220px
                 position: relative
+                @media screen and ( max-width: 1024px)
+                    &:last-child
+                        display: none
+                @media screen and ( max-width: 940px )
+                    &:nth-child(3)
+                         display: none
+                    &:nth-child(4)
+                        display: none
                 .item__hover
                     opacity: 0
                     position: absolute
@@ -495,7 +737,9 @@ header
 #tariff
     padding-top: 100px
     padding-bottom: 195px
-    background-color: #f5f5f5   
+    background-color: #f5f5f5
+    @media screen and ( max-width: 940px ) and ( min-width: 768px ) 
+        padding-bottom: 100px
     .section__name
         font-family: "Muller", sans-serif
         font-weight: bold
@@ -532,11 +776,15 @@ header
                 &:hover
                     color: #e42626
             .active
+                color: #e42626
                 border: 2px solid #e42626
                 border-radius: 5px
     .tariff__list
         display: flex
         justify-content: space-between
+        @media screen and ( max-width: 934px ) and ( min-width: 768px )
+            flex-wrap: wrap
+            justify-content: center
         .tariff__list-item
             height: 920px
             background-color: #ffffff
@@ -550,6 +798,11 @@ header
                 width: 320px
                 border-left: none
                 border-right: none
+            @media screen and ( max-width: 934px ) and ( min-width: 768px )
+                margin: 15px
+                width: 40%
+                &:nth-child(2)
+                    width: 40%
                 
             .item__name
                 margin-top: 52px
@@ -643,6 +896,8 @@ header
         margin-left: auto
         margin-right: 80px
         max-width: 320px
+        @media screen and ( max-width: 830px ) and ( min-width: 768px )
+            margin-right: 20px
         .input__setting
             background-color: #ffffff
             border: 1px solid #dddddd
@@ -651,10 +906,12 @@ header
             font-size: 16px
             color: #000000
             padding: 15px
+            font-family: 'Muller', sans-serif
         .input__massage
             height: 80px
             resize: none
             padding: 15px
+            font-family: 'Muller', sans-serif
         .form__content__name
             color: #000000
             font-family: "Muller", sans-serif
@@ -687,6 +944,8 @@ header
             margin-bottom: 17px
             &:hover
                 background-image: linear-gradient(to top, #c10b0b 0%, #e42626 100%)
+            @media screen and ( max-width: 830px ) and ( min-width: 768px )
+                font-size: 16px
         .form__content__title-info
             text-align: center
             color: #000000;
@@ -748,5 +1007,4 @@ footer
             line-height: 22px
             img
                 margin-left: 28px
-             
-                        
+   
