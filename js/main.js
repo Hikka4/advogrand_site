@@ -24,3 +24,29 @@ function toggleShadow(el, maxScrollReached) {
 
 handleShadowVisibility();
 reviewsMenu.addEventListener('scroll', (e) => handleShadowVisibility(e));
+
+const reviewsContentBlock = document.querySelector('.reviews__content-block');
+const contentShadowStart = document.querySelector('.content__shadow--start');
+const contentShadowEnd = document.querySelector('.content__shadow--end');
+
+function handleShadowVisibilityContent() {
+    const maxScrollStartReached = reviewsContentBlock.scrollLeft <= 0;
+    const maxScrollEndReached = reviewsContentBlock.scrollLeft >= reviewsContentBlock.scrollWidth - reviewsContentBlock.offsetWidth;
+    toggleShadowContent(contentShadowStart, maxScrollStartReached );
+    toggleShadowContent(contentShadowEnd, maxScrollEndReached);
+}
+
+function toggleShadowContent(el, maxScrollReached) {
+    const shadowIsVisible = el.classList.contains('is-active');
+    const showShadow = !maxScrollReached && !shadowIsVisible;
+    const hideShadow = maxScrollReached && shadowIsVisible;
+    // requestAnimationFrame для оптимального исполнения прокрутки
+    if(showShadow) {
+        window.requestAnimationFrame(() => el.classList.add('is-active'));        
+    } else if(hideShadow) {
+        window.requestAnimationFrame(() => el.classList.remove('is-active'));
+    }
+}
+
+handleShadowVisibilityContent();
+reviewsContentBlock.addEventListener('scroll', (e) => handleShadowVisibilityContent(e));

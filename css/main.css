@@ -1100,6 +1100,7 @@ header {
   background: -webkit-gradient(linear, left top, right top, from(rgba(245, 245, 245, 0)), color-stop(80%, #f5f5f5));
   background: linear-gradient(to right, rgba(245, 245, 245, 0), #f5f5f5 80%);
   pointer-events: none;
+  opacity: 0;
   -webkit-transition: opacity 0.1s;
   transition: opacity 0.1s;
 }
