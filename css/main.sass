@@ -498,7 +498,7 @@ header
         @media screen and ( max-width: 940px )
             margin-left: 40px
         @media screen and ( max-width: 830px ) and ( min-width: 425px )
-            width: 100%
+            // width: 100%
             margin-left: 0
             display: flex
         @media screen and ( max-width: 767px) and (min-width: 425px )
@@ -567,6 +567,7 @@ header
             &:hover
                 color: #e42626
         .active
+            transition: 0.5s
             border: 2px solid #e42626
             border-radius: 5px
             color: #e50000
@@ -595,11 +596,13 @@ header
         @media (pointer: coarse)
             overflow: hidden
         @media screen and ( max-width: 767px) and (min-width: 425px )
-           width: 80%
+           width: 85%
         .reviews__content-block
             display: flex
             // align-items: center
             // Тут свойства для скролл блока
+            &.hidden-content
+                display: none
             @media screen and ( max-width: 767px) and (min-width: 425px )
                 position: relative
                 width: 100%
@@ -621,13 +624,21 @@ header
             pointer-events: none
             opacity: 0
             transition: opacity 0.1s
+            @media screen and ( max-width: 590px)
+                width: 3em
         .is-active
             opacity: 1
         .content__shadow--start
             left: 0
             transform: rotate(180deg)
+            @media screen and ( max-width: 590px) and (min-width: 425px)
+                left: -2px
+                top: -2px
         .content__shadow--end
             right: 0
+            @media screen and ( max-width: 590px) and (min-width: 425px)
+                right: -2px
+                top: -2px
         
         .reviews__arrow
             margin: auto 0
@@ -645,20 +656,13 @@ header
                     margin-right: 30px
             @media screen and ( max-width: 767px) and (min-width: 425px )
                 display: none
-
+        .hidden
+            display: none
+            @media screen and ( max-width: 767px ) and (min-width: 425px)
+                display: block
         .content__item
             margin: 0 10px
             width: 300px
-            // @media screen and ( max-width: 1024px )
-            //     &:last-child
-            //         display: none
-            // @media screen and ( max-width: 940px ) and ( min-width: 768px )
-            //     &:last-child
-            //         display: none
-            // @media screen and ( max-width: 767px) and (min-width: 425px )
-            //     &:nth-child(2)
-            //         display: none
-                    
             .item__img
                 width: 300px
                 z-index: 1
@@ -695,9 +699,25 @@ header
         display: flex
         align-items: center
         justify-content: center
+        height: 12em
+        @media (pointer: coarse)
+            overflow: hidden
+        @media screen and ( max-width: 767px) and (min-width: 425px )
+            width: 75%
+            position: relative
+            margin: 0 auto
+            height: 12em
         .partners__slider-arrow
             color: #cccccc
             margin-right: 70px
+            opacity: 1
+            cursor: pointer
+            @media screen and ( max-width: 890px ) and ( min-width: 768px )
+                margin-left: 15px
+                &:first-child
+                    margin-right: 15px
+            @media screen and ( max-width: 767px) and (min-width: 425px )
+                display: none
             &:last-child
                 margin-right: 0
                 margin-left: 70px
@@ -705,18 +725,26 @@ header
                 color: #e42626
         .slider__box
             display: flex
+            @media screen and ( max-width: 767px) and (min-width: 425px )
+                position: relative
+                width: 100%
+                overflow-x: auto
+                overflow-y: hidden
+                margin: 0 auto
+                z-index: 0
+                -webkit-overflow-scrolling: touch;
+                height: 12em
+                // media
+                @media (pointer: coarse)
+                    height: 13em
             .slider__item
                 margin: 0px 10px
                 width: 220px
                 position: relative
-                @media screen and ( max-width: 1024px)
-                    &:last-child
-                        display: none
-                @media screen and ( max-width: 940px )
-                    &:nth-child(3)
-                         display: none
-                    &:nth-child(4)
-                        display: none
+                &.hidden
+                    display: none
+                    @media screen and ( max-width: 767px ) and (min-width: 425px)
+                        display: block
                 .item__hover
                     opacity: 0
                     position: absolute
@@ -734,6 +762,33 @@ header
                 &:hover
                     .item__hover
                         opacity: 1
+
+        .partners__shadow
+            width: 4em
+            height: 100%
+            position: absolute
+            top: 0
+            background: linear-gradient(to right, rgba(#ffffff, 0), #ffffff 80%)
+            pointer-events: none
+            opacity: 0
+            transition: opacity 0.1s
+            @media screen and ( max-width: 590px)
+                width: 3em
+        .is-visible
+            opacity: 1
+        .partners__shadow--start
+            left: 0
+            transform: rotate(180deg)
+            @media screen and ( max-width: 590px) and (min-width: 425px)
+                left: -2px
+                top: -2px
+        .partners__shadow--end
+            right: 0
+            @media screen and ( max-width: 590px) and (min-width: 425px)
+                right: -2px
+                top: -2px
+
+        
 #tariff
     padding-top: 100px
     padding-bottom: 195px
