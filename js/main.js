@@ -169,6 +169,51 @@ function partnerSliderMove(el) {
     }
     showVisibleArrow(visibleItem.firstHiddenPartner, visibleItem.firstVisiblePartner, partnerSliderItem, partnerArrowRight, partnerArrowLeft);
 }
+
+// Работаем с tariff sliders
+
+let tariffListItem = document.querySelectorAll('.tariff__list-item');
+let tariffArrowLeft = document.querySelector('.tariff__arrow--left');
+let tariffArrowRight = document.querySelector('.tariff__arrow--right');
+tariffArrowLeft.style.opacity = 0;
+tariffArrowLeft.style.cursor = "default"
+let numberTarif = 0;
+if(window.outerWidth <= 767 && window.outerWidth > 425) {
+    tariffListItem[1].style.display = 'none';
+    tariffListItem[2].style.display = 'none';
+}
+function tariffListMove(el) {
+    if(el.target == tariffArrowRight && numberTarif != tariffListItem.length-1) {
+        tariffListItem[numberTarif].style.display = 'none';
+        tariffListItem[numberTarif+1].style.display = 'block';
+        numberTarif++;
+        if(numberTarif == tariffListItem.length-1) {
+            tariffArrowRight.style.opacity = 0;
+            tariffArrowRight.style.cursor = "default";
+        }
+    } else if(el.target == tariffArrowLeft && numberTarif != 0) {
+        tariffListItem[numberTarif].style.display = 'none';
+        tariffListItem[numberTarif-1].style.display = 'block';
+        numberTarif--;
+        if(numberTarif == 0) {
+            tariffArrowLeft.style.opacity = 0;
+            tariffArrowLeft.style.cursor = "default";
+            
+        }
+    }
+    if(numberTarif > 0) {
+        tariffArrowLeft.style.opacity = 1;
+        tariffArrowLeft.style.cursor = "pointer";
+    }
+    if(numberTarif < tariffListItem.length-1) {
+        tariffArrowRight.style.opacity = 1;
+        tariffArrowRight.style.cursor = "pointer";
+    }
+}
+
+tariffArrowRight.addEventListener('click', (e) => tariffListMove(e));
+tariffArrowLeft.addEventListener('click', (e) => tariffListMove(e));
+
 /*--------------ПЕРЕМЕННЫЕ ---------------- */
 // Тут у нас будут функции для работы с навигацией в "отзывах"
 

@@ -11,6 +11,9 @@ a
     @media screen and ( max-width: 767px) and (min-width: 425px )
         width: 100%
         margin: 0
+    @media screen and (max-width: 424px)
+        width: 100%
+        margin: 0
     width: 940px
     margin: 0 auto
 
@@ -27,7 +30,7 @@ a
     margin-bottom: 31px
     @media screen and ( max-width: 940px ) and ( min-width: 768px )
         flex-direction: column
-    @media screen and ( max-width: 767px) and (min-width: 425px )
+    @media screen and ( max-width: 767px) 
         flex-direction: column
     .contact__number
         color: #1c1c1c
@@ -40,13 +43,13 @@ a
         font-weight: 300
         line-height: 22px
         letter-spacing: 0.14px
-        @media screen and ( max-width: 670px) and (min-width: 425px )
+        @media screen and ( max-width: 670px) 
             display: flex
             flex-direction: column
             align-items: center
         .nav__button
             display: none
-            @media screen and ( max-width: 670px) and (min-width: 425px )
+            @media screen and ( max-width: 670px)
                 display: block
             .hamburger__button
                 background-color: #000
@@ -67,7 +70,7 @@ a
         ul
             display: flex
             justify-content: space-between
-            @media screen and ( max-width: 670px) and (min-width: 425px )
+            @media screen and ( max-width: 670px)
                 flex-direction: column
                 text-align: center
                 display: none
@@ -93,7 +96,7 @@ header
     display: flex
     justify-content: space-between
     align-items: center
-    @media screen and ( max-width: 640px) and (min-width: 425px )
+    @media screen and ( max-width: 640px) 
         flex-wrap: wrap
         justify-content: space-around
     .header__logo
@@ -148,7 +151,7 @@ header
     background-size: cover
     background-repeat: no-repeat
     .content__info
-        @media screen and ( max-width: 767px) and (min-width: 425px )
+        @media screen and ( max-width: 767px)
             width: 90%
             margin: 0 auto
         .info__head
@@ -211,6 +214,10 @@ header
             margin-top: 80px
             width: 90%
             justify-content: space-around
+        @media screen and (max-width: 424px)
+            width: 90%
+            margin: 0 auto
+            margin-top: 80px
         .provided__item
             display: flex
             align-items: center
@@ -221,9 +228,11 @@ header
                 // text-align: center
                 &:last-child
                     margin-bottom: 0
-            @media screen and ( max-width: 555px) and (min-width: 425px )
+            @media screen and ( max-width: 555px) and (min-width: 425px)
                 width: 50%
-                // text-align: center
+            @media screen and (max-width: 424px)
+                width: 100%
+                justify-content: center
             img
                 margin-right: 30px
             .item__title
@@ -241,7 +250,7 @@ header
     background-position: center center
     padding-top: 100px
     padding-bottom: 98px
-    @media screen and ( max-width: 767px) and (min-width: 425px )
+    @media screen and ( max-width: 767px) 
         .container
             width: 90%
             margin: 0 auto
@@ -264,7 +273,7 @@ header
         color: #ffffff
         display: flex
         justify-content: space-around
-        @media screen and ( max-width: 767px) and (min-width: 425px )
+        @media screen and ( max-width: 767px)
             flex-wrap: wrap
         .statistics__item
             display: flex
@@ -276,6 +285,10 @@ header
             @media screen and ( max-width: 767px) and (min-width: 425px )
                 width: 50%
                 margin-bottom: 15px
+            @media screen and ( max-width: 400 )
+                width: 100%
+                margin-bottom: 15px
+                
             .item__number
                 font-size: 48px
                 font-weight: 700
@@ -743,8 +756,6 @@ header
                 position: relative
                 &.hidden
                     display: none
-                    @media screen and ( max-width: 767px ) and (min-width: 425px)
-                        display: block
                 .item__hover
                     opacity: 0
                     position: absolute
@@ -802,6 +813,10 @@ header
         text-align: left
         color: #313131
         margin-bottom: 39px
+        @media screen and ( max-width: 767px ) and (min-width: 425px)
+            width: 90%
+            margin: 0 auto
+            margin-bottom: 39px
     .section__title
         font-family: "Muller", sans-serif
         font-weight: bold
@@ -810,11 +825,23 @@ header
         line-height: 25px
         text-align: left
         margin-bottom: 50px
+        @media screen and ( max-width: 767px ) and (min-width: 425px)
+            width: 90%
+            margin: 0 auto
+            margin-bottom: 50px
     .tariff__options
         display: flex
         justify-content: space-between
         margin-bottom: 39px
-        .option__name
+        @media screen and ( max-width: 700px ) and (min-width: 425px)
+            flex-direction: column
+            .options__name
+                margin-bottom: 30px
+        @media screen and ( max-width: 767px ) and (min-width: 425px)
+            width: 90%
+            margin: 0 auto
+            margin-bottom: 50px
+        .options__name
             font-family: "Muller", sans-serif
             font-weight: 300
             color: #313131
@@ -837,6 +864,20 @@ header
     .tariff__list
         display: flex
         justify-content: space-between
+        align-items: center 
+        @media screen and ( max-width: 767px ) and (min-width: 425px)
+            justify-content: space-around
+        .tariff__list-arrow
+            color: #cccccc
+            opacity: 1
+            cursor: pointer
+            display: none
+            @media screen and ( max-width: 934px ) and ( min-width: 768px )
+                display: none
+            @media screen and ( max-width: 767px ) and (min-width: 425px)
+                display: block
+            &:hover
+                color: #e42626
         @media screen and ( max-width: 934px ) and ( min-width: 768px )
             flex-wrap: wrap
             justify-content: center
@@ -858,6 +899,12 @@ header
                 width: 40%
                 &:nth-child(2)
                     width: 40%
+            @media screen and ( max-width: 767px ) and (min-width: 425px)
+                width: 320px
+                height: 100%
+                align-items: center
+                &:nth-child(2)
+                    width: 320px
                 
             .item__name
                 margin-top: 52px
@@ -940,19 +987,29 @@ header
                     margin-bottom: 50px
                     padding: 19px 64px 18px 76px
                     
+                    
 #contacts
     background: linear-gradient(to right, #f5f5f5 50%, #ffffff 50%)
     padding: 70px 0
+    @media screen and ( max-width: 650px ) and (min-width: 425px)
+        background: linear-gradient(to bottom, #ffffff 55%, #f5f5f5 45%)
     .container
         display: flex
+        @media screen and ( max-width: 650px ) and (min-width: 425px)
+            flex-direction: column
     .form__box
         width: 50%
+        @media screen and ( max-width: 650px ) and (min-width: 425px)
+            width: 100%
     .form__content
         margin-left: auto
         margin-right: 80px
         max-width: 320px
         @media screen and ( max-width: 830px ) and ( min-width: 768px )
             margin-right: 20px
+        @media screen and ( max-width: 650px ) and (min-width: 425px)
+            width: 100%
+            margin: 0 auto
         .input__setting
             background-color: #ffffff
             border: 1px solid #dddddd
@@ -1001,6 +1058,8 @@ header
                 background-image: linear-gradient(to top, #c10b0b 0%, #e42626 100%)
             @media screen and ( max-width: 830px ) and ( min-width: 768px )
                 font-size: 16px
+            @media screen and ( max-width: 767px ) and (min-width: 425px)
+                line-height: 20px
         .form__content__title-info
             text-align: center
             color: #000000;
@@ -1011,6 +1070,9 @@ header
     .contacts__info
         margin-left: 78px
         margin-top: 30px
+        @media screen and ( max-width: 650px ) and (min-width: 425px)
+            margin-left: 0
+            text-align: center
         .info__name
             color: #000000
             font-weight: bold
@@ -1018,6 +1080,8 @@ header
             font-size: 30px
             line-height: 40px
             margin-bottom: 78px
+            @media screen and ( max-width: 650px ) and (min-width: 425px)
+                margin-bottom: 30px
         .info__subtitle
             color: #000000
             font-family: "Muller", sans-serif
@@ -1054,6 +1118,14 @@ footer
         display: flex
         justify-content: space-between
         align-items: center
+        @media screen and ( max-width: 500px ) and (min-width: 425px)
+            .footer__logo
+                margin-left: 20px
+            .footer__developers
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                margin-right: 20px
         .footer__developers
             color: #ffffff
             font-size: 13px
@@ -1062,4 +1134,5 @@ footer
             line-height: 22px
             img
                 margin-left: 28px
+        
    
