@@ -1116,7 +1116,7 @@ header {
   }
 }
 
-#reviews .reviews__content .is-active {
+#reviews .reviews__content .is-visible {
   opacity: 1;
 }
 
