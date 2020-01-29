@@ -37,6 +37,15 @@ a {
   text-align: center;
 }
 
+.fixed {
+  -webkit-box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 22;
+}
+
 .float__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,13 +118,63 @@ a {
   }
 }
 
-.float__menu nav .nav__button .hamburger__button {
-  background-color: #000;
+.float__menu nav .visible .hamburger__button {
+  posititon: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.float__menu nav .visible .hamburger__button:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 7px;
+}
+
+.float__menu nav .visible .hamburger__button:nth-child(2) {
+  opacity: 0;
+}
+
+.float__menu nav .visible .hamburger__button:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 7px;
+}
+
+.float__menu nav .hide .hamburger__button {
+  posititon: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.float__menu nav .hide .hamburger__button:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  top: 0px;
+}
+
+.float__menu nav .hide .hamburger__button:nth-child(2) {
+  opacity: 1;
+}
+
+.float__menu nav .hide .hamburger__button:nth-child(3) {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  bottom: 0px;
+}
+
+.float__menu nav .vision {
+  display: block;
+  opacity: 1;
+}
+
+.float__menu nav .hamburger__button {
+  background-color: #c42626;
   width: 35px;
   height: 4px;
   margin: 3px;
   display: block;
   border-radius: 5px;
+  position: relative;
 }
 
 @media screen and (max-width: 940px) and (min-width: 768px) {
@@ -230,6 +289,12 @@ header {
   letter-spacing: 0.14px;
 }
 
+@media screen and (max-width: 385px) {
+  .header__content .header__title {
+    margin: 15px 0;
+  }
+}
+
 .header__content .header__app {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -301,9 +366,22 @@ header {
   margin-bottom: 65px;
 }
 
+@media screen and (max-width: 424px) {
+  .top__content .content__info .info__head {
+    font-size: 28px;
+    line-height: 45px;
+  }
+}
+
 .top__content .content__info .info__head span {
   font-size: 40px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 424px) {
+  .top__content .content__info .info__head span {
+    font-size: 35px;
+  }
 }
 
 .top__content .content__info .info__title {
@@ -562,6 +640,18 @@ header {
   }
 }
 
+@media screen and (max-width: 424px) {
+  #use__services .services__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 #use__services .services__box .services__item {
   width: 33.3333%;
   text-align: center;
@@ -571,6 +661,13 @@ header {
   #use__services .services__box .services__item {
     width: 50%;
     margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  #use__services .services__box .services__item {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
@@ -598,7 +695,7 @@ header {
   padding-bottom: 100px;
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #advantages {
     display: none;
   }
@@ -816,7 +913,7 @@ header {
   display: flex;
 }
 
-@media screen and (max-width: 830px) and (min-width: 425px) {
+@media screen and (max-width: 830px) {
   #application .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -825,7 +922,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #application .container {
     width: 90%;
     margin: 0 auto;
@@ -836,7 +933,7 @@ header {
   width: 530px;
 }
 
-@media screen and (max-width: 830px) and (min-width: 425px) {
+@media screen and (max-width: 830px) {
   #application .application__content {
     width: 100%;
   }
@@ -855,7 +952,7 @@ header {
   width: 530px;
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #application .application__content .content__list {
     width: 100%;
   }
@@ -872,7 +969,7 @@ header {
   padding-bottom: 30px;
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #application .application__content .content__list li:first-child {
     display: inline-block;
   }
@@ -896,10 +993,16 @@ header {
   color: #e41e1e;
 }
 
-@media screen and (max-width: 630px) and (min-width: 425px) {
+@media screen and (max-width: 630px) {
   #application .application__content .content__list li .mobile__controle {
     display: inline-block;
     padding-left: 36px;
+  }
+}
+
+@media screen and (max-width: 630px) and (max-width: 390px) {
+  #application .application__content .content__list li .mobile__controle {
+    padding-left: 0;
   }
 }
 
@@ -1002,7 +1105,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #reviews .block__menu {
     width: 70%;
   }
@@ -1093,7 +1196,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #reviews .reviews__content {
     width: 85%;
   }
@@ -1109,7 +1212,7 @@ header {
   display: none;
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #reviews .reviews__content .reviews__content-block {
     position: relative;
     width: 100%;
@@ -1122,7 +1225,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) and (pointer: coarse) {
+@media screen and (max-width: 767px) and (pointer: coarse) {
   #reviews .reviews__content .reviews__content-block {
     height: 22em;
   }
@@ -1143,7 +1246,7 @@ header {
 
 @media screen and (max-width: 590px) {
   #reviews .reviews__content .content__shadow {
-    width: 3em;
+    width: 2.5em;
   }
 }
 
@@ -1157,7 +1260,7 @@ header {
           transform: rotate(180deg);
 }
 
-@media screen and (max-width: 590px) and (min-width: 425px) {
+@media screen and (max-width: 590px) {
   #reviews .reviews__content .content__shadow--start {
     left: -2px;
     top: -2px;
@@ -1168,7 +1271,7 @@ header {
   right: 0;
 }
 
-@media screen and (max-width: 590px) and (min-width: 425px) {
+@media screen and (max-width: 590px) {
   #reviews .reviews__content .content__shadow--end {
     right: -2px;
     top: -2px;
@@ -1200,7 +1303,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #reviews .reviews__content .reviews__arrow {
     display: none;
   }
@@ -1210,7 +1313,7 @@ header {
   display: none;
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #reviews .reviews__content .hidden {
     display: block;
   }
@@ -1285,7 +1388,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #partners .partners__slider {
     width: 75%;
     position: relative;
@@ -1310,7 +1413,13 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
+  #partners .partners__slider .partners__slider-arrow {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1171px) {
   #partners .partners__slider .partners__slider-arrow {
     display: none;
   }
@@ -1331,7 +1440,7 @@ header {
   display: flex;
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #partners .partners__slider .slider__box {
     position: relative;
     width: 100%;
@@ -1344,7 +1453,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) and (pointer: coarse) {
+@media screen and (max-width: 767px) and (pointer: coarse) {
   #partners .partners__slider .slider__box {
     height: 13em;
   }
@@ -1411,7 +1520,7 @@ header {
           transform: rotate(180deg);
 }
 
-@media screen and (max-width: 590px) and (min-width: 425px) {
+@media screen and (max-width: 590px) {
   #partners .partners__slider .partners__shadow--start {
     left: -2px;
     top: -2px;
@@ -1422,7 +1531,7 @@ header {
   right: 0;
 }
 
-@media screen and (max-width: 590px) and (min-width: 425px) {
+@media screen and (max-width: 590px) {
   #partners .partners__slider .partners__shadow--end {
     right: -2px;
     top: -2px;
@@ -1450,7 +1559,7 @@ header {
   margin-bottom: 39px;
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #tariff .section__name {
     width: 90%;
     margin: 0 auto;
@@ -1468,7 +1577,7 @@ header {
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #tariff .section__title {
     width: 90%;
     margin: 0 auto;
@@ -1486,7 +1595,7 @@ header {
   margin-bottom: 39px;
 }
 
-@media screen and (max-width: 700px) and (min-width: 425px) {
+@media screen and (max-width: 700px) {
   #tariff .tariff__options {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1498,7 +1607,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #tariff .tariff__options {
     width: 90%;
     margin: 0 auto;
@@ -1547,7 +1656,7 @@ header {
           align-items: center;
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #tariff .tariff__list {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -1567,7 +1676,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #tariff .tariff__list .tariff__list-arrow {
     display: block;
   }
@@ -1621,7 +1730,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #tariff .tariff__list .tariff__list-item {
     width: 320px;
     height: 100%;
@@ -1771,7 +1880,7 @@ header {
   padding: 70px 0;
 }
 
-@media screen and (max-width: 650px) and (min-width: 425px) {
+@media screen and (max-width: 650px) {
   #contacts {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(55%, #ffffff), color-stop(45%, #f5f5f5));
     background: linear-gradient(to bottom, #ffffff 55%, #f5f5f5 45%);
@@ -1784,7 +1893,7 @@ header {
   display: flex;
 }
 
-@media screen and (max-width: 650px) and (min-width: 425px) {
+@media screen and (max-width: 650px) {
   #contacts .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1797,7 +1906,7 @@ header {
   width: 50%;
 }
 
-@media screen and (max-width: 650px) and (min-width: 425px) {
+@media screen and (max-width: 650px) {
   #contacts .form__box {
     width: 100%;
   }
@@ -1815,7 +1924,7 @@ header {
   }
 }
 
-@media screen and (max-width: 650px) and (min-width: 425px) {
+@media screen and (max-width: 650px) {
   #contacts .form__content {
     width: 100%;
     margin: 0 auto;
@@ -1890,7 +1999,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 425px) {
+@media screen and (max-width: 767px) {
   #contacts .form__content .form__content__button {
     line-height: 20px;
   }
@@ -1910,7 +2019,7 @@ header {
   margin-top: 30px;
 }
 
-@media screen and (max-width: 650px) and (min-width: 425px) {
+@media screen and (max-width: 650px) {
   #contacts .contacts__info {
     margin-left: 0;
     text-align: center;
@@ -1926,7 +2035,7 @@ header {
   margin-bottom: 78px;
 }
 
-@media screen and (max-width: 650px) and (min-width: 425px) {
+@media screen and (max-width: 650px) {
   #contacts .contacts__info .info__name {
     margin-bottom: 30px;
   }
@@ -2017,5 +2126,14 @@ footer .container .footer__developers {
 
 footer .container .footer__developers img {
   margin-left: 28px;
+}
+
+@media screen and (max-width: 424px) {
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=main.css.map */

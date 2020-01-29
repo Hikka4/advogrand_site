@@ -21,7 +21,12 @@ a
     width: 100%
     text-align: center
 // Top Section ##################
-
+.fixed
+    box-shadow: 0 5px 7px rgba(0,0,0,0.20)
+    position: fixed
+    width: 100%
+    background-color: rgba(255,255,255, 0.95)
+    z-index: 22
 .float__menu
     display: flex
     align-items: center
@@ -51,13 +56,46 @@ a
             display: none
             @media screen and ( max-width: 670px)
                 display: block
+        .visible
             .hamburger__button
-                background-color: #000
-                width: 35px
-                height: 4px
-                margin: 3px
-                display: block
-                border-radius: 5px
+                posititon: relative
+                transition: 0.3s
+                &:nth-child(1)
+                    transform: rotate(45deg)
+                    top: 7px
+                &:nth-child(2)
+                    opacity: 0
+                &:nth-child(3)
+                    transform: rotate(-45deg)
+                    bottom: 7px
+        .hide
+            .hamburger__button
+                posititon: relative
+                transition: 0.3s
+                &:nth-child(1)
+                    transform: rotate(0deg)
+                    top: 0px
+                &:nth-child(2)
+                    opacity: 1
+                &:nth-child(3)
+                    transform: rotate(0deg)
+                    bottom: 0px
+        .vision
+            display: block
+            opacity: 1
+            // transition: max-height .2s linear
+            // max-height: 300px
+
+            
+        .hamburger__button
+            background-color: #c42626
+            width: 35px
+            height: 4px
+            margin: 3px
+            display: block
+            border-radius: 5px
+            position: relative
+                    
         @media screen and ( max-width: 940px ) and ( min-width: 768px )
             margin: 10px 0
         @media screen and ( max-width: 767px)
@@ -115,6 +153,8 @@ header
         color: #1c1c1c
         line-height: 22px
         letter-spacing: 0.14px
+        @media screen and (max-width: 385px)
+            margin: 15px 0
     .header__app
         display: flex
         align-items: center
@@ -161,9 +201,14 @@ header
             font-weight: 700
             line-height: 50px
             margin-bottom: 65px
+            @media screen and ( max-width: 424px)
+                font-size: 28px
+                line-height: 45px
             span
                 font-size: 40px
                 text-transform: uppercase
+                @media screen and ( max-width: 424px)
+                    font-size: 35px
         .info__title
             color: #ffffff
             font-family: "Proxima Nova Lt", sans-serif
@@ -317,12 +362,18 @@ header
             flex-wrap: wrap
             width: 90%
             margin: 0 auto
+        @media screen and (max-width: 424px)
+            flex-direction: column
+            align-items: center
         .services__item
             width: 33.3333%
             text-align: center
             @media screen and ( max-width: 650px) and (min-width: 425px )
                 width: 50%
                 margin-bottom: 15px
+            @media screen and (max-width: 424px)
+                width: 100%
+                margin-bottom: 20px
 
             img
                 height: 90px
@@ -342,7 +393,7 @@ header
 #advantages
     padding-top: 100px
     padding-bottom: 100px
-    @media screen and ( max-width: 767px) and (min-width: 425px )
+    @media screen and ( max-width: 767px)
         display: none
     .section__name
         line-height: 30px
@@ -458,14 +509,14 @@ header
     padding: 100px 0
     .container
         display: flex
-        @media screen and ( max-width: 830px ) and ( min-width: 425px )
+        @media screen and ( max-width: 830px )
             flex-direction: column
-        @media screen and ( max-width: 767px) and (min-width: 425px )
+        @media screen and ( max-width: 767px)
             width: 90%
             margin: 0 auto
     .application__content
         width: 530px
-        @media screen and ( max-width: 830px ) and ( min-width: 425px )
+        @media screen and ( max-width: 830px )
             width: 100%
         .content__name
             color: #ffffff
@@ -476,7 +527,7 @@ header
             margin-bottom: 110px
         .content__list
             width: 530px
-            @media screen and ( max-width: 767px) and (min-width: 425px )
+            @media screen and ( max-width: 767px)
                 width: 100%
             li
                 display: flex
@@ -485,7 +536,7 @@ header
                 font-family: "Muller", sans-serif
                 font-weight: 300
                 padding-bottom: 30px
-                @media screen and ( max-width: 767px) and (min-width: 425px )
+                @media screen and ( max-width: 767px)
                     &:first-child
                         display: inline-block
                 .list__number
@@ -500,10 +551,13 @@ header
                     margin: 0 4px
                     &:hover
                         color: #e41e1e
-                @media screen and ( max-width: 630px) and (min-width: 425px )
+                @media screen and ( max-width: 630px)
                     .mobile__controle
                         display: inline-block
                         padding-left: 36px
+                        @media screen and ( max-width: 390px )
+                            padding-left: 0
+                            
     .application__button
         width: 260px
         margin-top: 33px
@@ -554,7 +608,7 @@ header
         align-items: center
         @media (pointer: coarse)
             overflow: hidden
-        @media screen and ( max-width: 767px) and (min-width: 425px )
+        @media screen and ( max-width: 767px) 
             width: 70%
     .reviews__menu
         display: flex
@@ -608,7 +662,7 @@ header
         // media
         @media (pointer: coarse)
             overflow: hidden
-        @media screen and ( max-width: 767px) and (min-width: 425px )
+        @media screen and ( max-width: 767px)
            width: 85%
         .reviews__content-block
             display: flex
@@ -616,7 +670,7 @@ header
             // Тут свойства для скролл блока
             &.hidden-content
                 display: none
-            @media screen and ( max-width: 767px) and (min-width: 425px )
+            @media screen and ( max-width: 767px)
                 position: relative
                 width: 100%
                 overflow-x: auto
@@ -625,6 +679,7 @@ header
                 z-index: 0
                 -webkit-overflow-scrolling: touch;
                 height: 19em
+                
                 // media
                 @media (pointer: coarse)
                     height: 22em
@@ -638,18 +693,18 @@ header
             opacity: 0
             transition: opacity 0.1s
             @media screen and ( max-width: 590px)
-                width: 3em
+                width: 2.5em
         .is-visible
             opacity: 1
         .content__shadow--start
             left: 0
             transform: rotate(180deg)
-            @media screen and ( max-width: 590px) and (min-width: 425px)
+            @media screen and ( max-width: 590px) 
                 left: -2px
                 top: -2px
         .content__shadow--end
             right: 0
-            @media screen and ( max-width: 590px) and (min-width: 425px)
+            @media screen and ( max-width: 590px)
                 right: -2px
                 top: -2px
         
@@ -667,11 +722,11 @@ header
                 margin-left: 30px
                 &:first-child
                     margin-right: 30px
-            @media screen and ( max-width: 767px) and (min-width: 425px )
+            @media screen and ( max-width: 767px)
                 display: none
         .hidden
             display: none
-            @media screen and ( max-width: 767px ) and (min-width: 425px)
+            @media screen and ( max-width: 767px )
                 display: block
         .content__item
             margin: 0 10px
@@ -715,7 +770,7 @@ header
         height: 12em
         @media (pointer: coarse)
             overflow: hidden
-        @media screen and ( max-width: 767px) and (min-width: 425px )
+        @media screen and ( max-width: 767px)
             width: 75%
             position: relative
             margin: 0 auto
@@ -729,7 +784,9 @@ header
                 margin-left: 15px
                 &:first-child
                     margin-right: 15px
-            @media screen and ( max-width: 767px) and (min-width: 425px )
+            @media screen and ( max-width: 767px)
+                display: none
+            @media screen and ( min-width: 1171px )
                 display: none
             &:last-child
                 margin-right: 0
@@ -738,7 +795,7 @@ header
                 color: #e42626
         .slider__box
             display: flex
-            @media screen and ( max-width: 767px) and (min-width: 425px )
+            @media screen and ( max-width: 767px)
                 position: relative
                 width: 100%
                 overflow-x: auto
@@ -790,12 +847,12 @@ header
         .partners__shadow--start
             left: 0
             transform: rotate(180deg)
-            @media screen and ( max-width: 590px) and (min-width: 425px)
+            @media screen and ( max-width: 590px)
                 left: -2px
                 top: -2px
         .partners__shadow--end
             right: 0
-            @media screen and ( max-width: 590px) and (min-width: 425px)
+            @media screen and ( max-width: 590px)
                 right: -2px
                 top: -2px
 
@@ -813,7 +870,7 @@ header
         text-align: left
         color: #313131
         margin-bottom: 39px
-        @media screen and ( max-width: 767px ) and (min-width: 425px)
+        @media screen and ( max-width: 767px )
             width: 90%
             margin: 0 auto
             margin-bottom: 39px
@@ -825,7 +882,7 @@ header
         line-height: 25px
         text-align: left
         margin-bottom: 50px
-        @media screen and ( max-width: 767px ) and (min-width: 425px)
+        @media screen and ( max-width: 767px ) 
             width: 90%
             margin: 0 auto
             margin-bottom: 50px
@@ -833,11 +890,11 @@ header
         display: flex
         justify-content: space-between
         margin-bottom: 39px
-        @media screen and ( max-width: 700px ) and (min-width: 425px)
+        @media screen and ( max-width: 700px )
             flex-direction: column
             .options__name
                 margin-bottom: 30px
-        @media screen and ( max-width: 767px ) and (min-width: 425px)
+        @media screen and ( max-width: 767px )
             width: 90%
             margin: 0 auto
             margin-bottom: 50px
@@ -865,7 +922,7 @@ header
         display: flex
         justify-content: space-between
         align-items: center 
-        @media screen and ( max-width: 767px ) and (min-width: 425px)
+        @media screen and ( max-width: 767px )
             justify-content: space-around
         .tariff__list-arrow
             color: #cccccc
@@ -874,7 +931,7 @@ header
             display: none
             @media screen and ( max-width: 934px ) and ( min-width: 768px )
                 display: none
-            @media screen and ( max-width: 767px ) and (min-width: 425px)
+            @media screen and ( max-width: 767px )
                 display: block
             &:hover
                 color: #e42626
@@ -899,7 +956,7 @@ header
                 width: 40%
                 &:nth-child(2)
                     width: 40%
-            @media screen and ( max-width: 767px ) and (min-width: 425px)
+            @media screen and ( max-width: 767px )
                 width: 320px
                 height: 100%
                 align-items: center
@@ -991,15 +1048,15 @@ header
 #contacts
     background: linear-gradient(to right, #f5f5f5 50%, #ffffff 50%)
     padding: 70px 0
-    @media screen and ( max-width: 650px ) and (min-width: 425px)
+    @media screen and ( max-width: 650px )
         background: linear-gradient(to bottom, #ffffff 55%, #f5f5f5 45%)
     .container
         display: flex
-        @media screen and ( max-width: 650px ) and (min-width: 425px)
+        @media screen and ( max-width: 650px )
             flex-direction: column
     .form__box
         width: 50%
-        @media screen and ( max-width: 650px ) and (min-width: 425px)
+        @media screen and ( max-width: 650px )
             width: 100%
     .form__content
         margin-left: auto
@@ -1007,7 +1064,7 @@ header
         max-width: 320px
         @media screen and ( max-width: 830px ) and ( min-width: 768px )
             margin-right: 20px
-        @media screen and ( max-width: 650px ) and (min-width: 425px)
+        @media screen and ( max-width: 650px )
             width: 100%
             margin: 0 auto
         .input__setting
@@ -1058,7 +1115,7 @@ header
                 background-image: linear-gradient(to top, #c10b0b 0%, #e42626 100%)
             @media screen and ( max-width: 830px ) and ( min-width: 768px )
                 font-size: 16px
-            @media screen and ( max-width: 767px ) and (min-width: 425px)
+            @media screen and ( max-width: 767px )
                 line-height: 20px
         .form__content__title-info
             text-align: center
@@ -1070,7 +1127,7 @@ header
     .contacts__info
         margin-left: 78px
         margin-top: 30px
-        @media screen and ( max-width: 650px ) and (min-width: 425px)
+        @media screen and ( max-width: 650px ) 
             margin-left: 0
             text-align: center
         .info__name
@@ -1080,7 +1137,7 @@ header
             font-size: 30px
             line-height: 40px
             margin-bottom: 78px
-            @media screen and ( max-width: 650px ) and (min-width: 425px)
+            @media screen and ( max-width: 650px )
                 margin-bottom: 30px
         .info__subtitle
             color: #000000
@@ -1134,5 +1191,7 @@ footer
             line-height: 22px
             img
                 margin-left: 28px
+        @media screen and ( max-width: 424px )
+            flex-direction: column
         
    

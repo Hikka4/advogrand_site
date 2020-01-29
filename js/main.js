@@ -171,17 +171,6 @@ function partnerSliderMove(el) {
 }
 
 // Работаем с tariff sliders
-
-let tariffListItem = document.querySelectorAll('.tariff__list-item');
-let tariffArrowLeft = document.querySelector('.tariff__arrow--left');
-let tariffArrowRight = document.querySelector('.tariff__arrow--right');
-tariffArrowLeft.style.opacity = 0;
-tariffArrowLeft.style.cursor = "default"
-let numberTarif = 0;
-if(window.outerWidth <= 767 && window.outerWidth > 425) {
-    tariffListItem[1].style.display = 'none';
-    tariffListItem[2].style.display = 'none';
-}
 function tariffListMove(el) {
     if(el.target == tariffArrowRight && numberTarif != tariffListItem.length-1) {
         tariffListItem[numberTarif].style.display = 'none';
@@ -211,11 +200,23 @@ function tariffListMove(el) {
     }
 }
 
-tariffArrowRight.addEventListener('click', (e) => tariffListMove(e));
-tariffArrowLeft.addEventListener('click', (e) => tariffListMove(e));
 
 /*--------------ПЕРЕМЕННЫЕ ---------------- */
-// Тут у нас будут функции для работы с навигацией в "отзывах"
+// вычисляем высоту плавающего меню
+let floatMenu = document.querySelector('.float__menu');
+let menu = document.querySelector('.menu');
+let menuMarginTop = getComputedStyle(floatMenu, true).marginTop;
+menuMarginTop = Number(menuMarginTop.slice(0, menuMarginTop.indexOf('px')));
+let menuMarginBottom = getComputedStyle(floatMenu, true).marginBottom;
+menuMarginBottom = Number(menuMarginBottom.slice(0, menuMarginBottom.indexOf('px')));
+let menuHeight = floatMenu.offsetHeight + menuMarginBottom + menuMarginTop;
+// вычисляем высоту header
+let nav = document.querySelector('header');
+let navMargin = getComputedStyle(nav, true).marginBottom;
+navMargin = Number(navMargin.slice(0, navMargin.indexOf('px')));
+let navHeight = nav.offsetHeight + navMargin;
+// место где прилипает меню
+let startFixMenu = menuHeight+navHeight + 30;
 
 const reviewsMenu = document.querySelector('.reviews__menu');
 const shadowStart = document.querySelector('.menu__shadow--start');
@@ -255,8 +256,21 @@ var shadowPartnerEnd = document.querySelector('.partners__shadow--end');
 var partnerSliderItem = document.querySelectorAll('.slider__item');
 var partnerArrowLeft = document.querySelector('.slider__arrow--left');
 var partnerArrowRight = document.querySelector('.slider__arrow--right');
+// определяем переменные для работы с слайдером тарифов
+let tariffListItem = document.querySelectorAll('.tariff__list-item');
+let tariffArrowLeft = document.querySelector('.tariff__arrow--left');
+let tariffArrowRight = document.querySelector('.tariff__arrow--right');
+tariffArrowLeft.style.opacity = 0;
+tariffArrowLeft.style.cursor = "default"
+let numberTarif = 0;
 
-
+// слушатель для прилипшего меню
+window.addEventListener('scroll', () => {
+    if( window.scrollY > startFixMenu)
+        menu.classList.add('fixed');
+    else
+        menu.classList.remove('fixed');
+});
 // вызываем для обновления состояния 
 handleShadowVisibility(reviewsMenu, shadowStart, shadowEnd);
 // вешаем слушатель на скролл reviewsMenu
@@ -288,7 +302,9 @@ partnerSlider.addEventListener('scroll', (e) => handleShadowVisibility(partnerSl
 // Добавляем слушателей на стрелки слайдера партнеров
 partnerArrowRight.addEventListener('click', (event) => partnerSliderMove(event));
 partnerArrowLeft.addEventListener('click', (event) => partnerSliderMove(event));
-
+// Слушатель на стрелки слайдера тарифов
+tariffArrowRight.addEventListener('click', (e) => tariffListMove(e));
+tariffArrowLeft.addEventListener('click', (e) => tariffListMove(e));
 
 
 
@@ -318,4 +334,47 @@ if(window.outerWidth <= 1170 && window.outerWidth > 767) {
                 partnerSliderItem[k].classList.remove("hidden");
         }
     }
+}
+if(window.outerWidth <= 767) {
+    tariffListItem[1].style.display = 'none';
+    tariffListItem[2].style.display = 'none';
+}
+
+
+let navButton = document.querySelector('.nav__button');
+navButton.addEventListener('click', (e) => {
+    if(navButton.classList.contains('hide')) {
+        navButton.classList.remove('hide');
+        navButton.classList.add('visible');
+        fadein(".nav__menu");
+    }
+    else {
+        navButton.classList.remove('visible');
+        navButton.classList.add('hide');
+        fadeout(".nav__menu");
+    }    
+});
+
+function fadein(el) {
+    var opacity = 0.01;
+    document.querySelector(el).style.display = 'block';
+    var timer = setInterval(function() {
+        if(opacity >= 1) {
+            clearInterval(timer);
+        }
+        document.querySelector(el).style.opacity = opacity;
+        opacity += opacity * 0.1;
+    }, 5);
+}
+
+function fadeout(el) {
+    var opacity = 1;
+    var timer = setInterval(function() {
+        if(opacity <= 1) {
+            clearInterval(timer);
+            document.querySelector(el).style.display = "none"
+        }
+        document.querySelector(el).style.opacity = opacity;
+        opacity -= opacity * 0.1;
+    }, 10);
 }
